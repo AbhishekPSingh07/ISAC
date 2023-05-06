@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "385857677864",
+    "firebase_url": "https://esp32-blind-cam-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "esp32-blind-cam",
+    "storage_bucket": "esp32-blind-cam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385857677864:android:128832a1914ee954d4231d",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385857677864-dm651el78rbag55nei399mq6bq3jhdoj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAO9Qjfxy1Z9OjbOFfZZy7NnOh5UZQv20"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385857677864-dm651el78rbag55nei399mq6bq3jhdoj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
