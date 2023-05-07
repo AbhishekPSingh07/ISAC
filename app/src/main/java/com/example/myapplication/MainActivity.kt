@@ -51,21 +51,20 @@ class MainActivity : AppCompatActivity() {
         Color.BLUE, Color.GREEN, Color.RED, Color.CYAN, Color.GRAY, Color.BLACK,
         Color.DKGRAY, Color.MAGENTA, Color.YELLOW, Color.RED)
     val paint = Paint()
-    val mediaPlayer = MediaPlayer()
+//    val mediaPlayer = MediaPlayer()
     lateinit var textToSpeech: TextToSpeech
     lateinit var imageProcessor: ImageProcessor
     private lateinit var context: Context
     lateinit var bitmap:Bitmap
     lateinit var imageView: ImageView
-    lateinit var cameraDevice: CameraDevice
+ //   lateinit var cameraDevice: CameraDevice
     lateinit var handler: Handler
-    lateinit var cameraManager: CameraManager
+   // lateinit var cameraManager: CameraManager
     lateinit var textureView: TextureView
     private lateinit var database:DatabaseReference
     lateinit var model:SsdMobilenetV11Metadata1
     private var isSpeaking = false
-    private val myWebView: WebView? = null
-    val params = HashMap<String, String>()
+
 
     private fun readData() {
         database = FirebaseDatabase.getInstance().getReference("esp32-cam")
@@ -73,7 +72,6 @@ class MainActivity : AppCompatActivity() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
                     val pic64 = dataSnapshot.value.toString()
-                    Log.i("Pic", pic64)
                     val viewWidth = textureView.width
                     val viewHeight = textureView.height
                     val decodedBytes = Base64.decode(pic64, Base64.DEFAULT)
@@ -110,7 +108,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        get_permission()
+        //get_permission()
         context = this
         val utteranceId = "myUtteranceId"
 
@@ -203,51 +201,22 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        cameraManager = getSystemService(CAMERA_SERVICE) as CameraManager
+        //cameraManager = getSystemService(CAMERA_SERVICE) as CameraManager
 
     }
 
 
     override fun onDestroy() {
         super.onDestroy()
-        mediaPlayer.setOnCompletionListener(object:MediaPlayer.OnCompletionListener{
-            override fun onCompletion(p0: MediaPlayer?) {
-                mediaPlayer.release()
-            }
-        })
+//        mediaPlayer.setOnCompletionListener(object:MediaPlayer.OnCompletionListener{
+//            override fun onCompletion(p0: MediaPlayer?) {
+//                mediaPlayer.release()
+//            }
+//        })
         model.close()
     }
 
-    @SuppressLint("MissingPermission")
-    fun open_camera(){
-        cameraManager.openCamera(cameraManager.cameraIdList[0], object:CameraDevice.StateCallback(){
-            override fun onOpened(p0: CameraDevice) {
-                cameraDevice = p0
 
-                var surfaceTexture = textureView.surfaceTexture
-                var surface = Surface(surfaceTexture)
-
-                var captureRequest = cameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW)
-                captureRequest.addTarget(surface)
-
-                cameraDevice.createCaptureSession(listOf(surface), object: CameraCaptureSession.StateCallback(){
-                    override fun onConfigured(p0: CameraCaptureSession) {
-                        p0.setRepeatingRequest(captureRequest.build(), null, null)
-                    }
-                    override fun onConfigureFailed(p0: CameraCaptureSession) {
-                    }
-                }, handler)
-            }
-
-            override fun onDisconnected(p0: CameraDevice) {
-
-            }
-
-            override fun onError(p0: CameraDevice, p1: Int) {
-
-            }
-        }, handler)
-    }
 
     fun get_permission(){
         if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
