@@ -11,10 +11,13 @@
 // ===========================
 // Enter your WiFi credentials
 // ===========================
-const char* ssid = "Airtel_9309564442";
-const char* password = "Airtel4442";
-const char* api_key =  "AIzaSyDExwvt7vQN2PaGF4hVJOQHV2zKDGLVK7c";
-const char* database_url = "https://esp32-blind-cam-default-rtdb.asia-southeast1.firebasedatabase.app/";
+const char* ssid = "***********";
+const char* password = "*********";
+// ================================
+// Enter your Firebase credentials
+// ================================
+const char* api_key =  "******* Enter your Api Key here*****";
+const char* database_url = "******* Enter your Api Key here*****";
 
 int trigPin = 4;
 int echoPin = 2;
@@ -188,7 +191,7 @@ String Photo2Base64() {
       return "";
     }
   
-    String imageFile = "data:image/jpeg;base64,";
+    String imageFile = "data:image/jpeg;base64";
     String encrypt = base64::encode(fb->buf,fb->len);
 
     esp_camera_fb_return(fb);
