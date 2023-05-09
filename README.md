@@ -31,6 +31,6 @@ Include circuit diagram and Android app screenshots here.
 
 ## Contributors
 
-This project was created by [AbhishekPSingh07](https://github.com/AbhishekPSingh07). Contributions to the project are welcome and appreciated.
+This project was created by [AbhishekPSingh07](https://github.com/AbhishekPSingh07),[sabu13](https://github.com/sabu13). Contributions to the project are welcome and appreciated.
 
 
