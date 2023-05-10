@@ -26,6 +26,9 @@ To use this project, follow these steps:
 6. Install the TensorFlow Lite object detection library and ensure that it is properly configured in your Android application.
 
 ## Screenshots
+### The Hardware
+<img width="939" alt="Screenshot 2023-05-10 at 11 40 32 PM" src="https://github.com/AbhishekPSingh07/ISAC/assets/79076050/697f7eae-117d-441a-a8af-18863e8c9449">
+
 ### Sample Outputs from the android App
 <img width="505" alt="Screenshot 2023-05-10 at 11 49 55 AM" src="https://github.com/AbhishekPSingh07/ISAC/assets/79076050/dce648dc-ab93-4c46-ac2e-8857c524d4e4">
 <img width="505" alt="Screenshot 2023-05-10 at 11 49 43 AM" src="https://github.com/AbhishekPSingh07/ISAC/assets/79076050/c1d4f706-d9d6-4298-b241-8cb9035fdd9e">
