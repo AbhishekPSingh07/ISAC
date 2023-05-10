@@ -18,16 +18,21 @@ The system operates by continuously measuring the distance using the ultrasonic 
 
 To use this project, follow these steps:
 
-1. Connect the ESP32-CAM module and ultrasonic sensor to your development board.
-2. Clone the project repository and upload the code to your development board.
+1. Connect the ESP32-CAM module and ultrasonic sensor to your development board According to the ciruit Diagram.
+2. Clone the project repository and upload the code to your development board(The Code for Arduino is in the Folder Blind_Assistant.
 3. Set up a Firebase account and create a new Realtime Database.
 4. Configure the ESP32-CAM module to connect to the internet and the Firebase Realtime Database.
 5. Install the Android application on your device and configure it to connect to the Firebase Realtime Database.
 6. Install the TensorFlow Lite object detection library and ensure that it is properly configured in your Android application.
 
 ## Screenshots
+### Sample Outputs from the android App
+<img width="505" alt="Screenshot 2023-05-10 at 11 49 55 AM" src="https://github.com/AbhishekPSingh07/ISAC/assets/79076050/dce648dc-ab93-4c46-ac2e-8857c524d4e4">
+<img width="505" alt="Screenshot 2023-05-10 at 11 49 43 AM" src="https://github.com/AbhishekPSingh07/ISAC/assets/79076050/c1d4f706-d9d6-4298-b241-8cb9035fdd9e">
+<img width="505" alt="Screenshot 2023-05-10 at 11 49 25 AM" src="https://github.com/AbhishekPSingh07/ISAC/assets/79076050/f64c4f42-3aba-4492-9454-cc30df8c0a0f">
 
-Include circuit diagram and Android app screenshots here.
+
+
 
 ## Contributors
 
